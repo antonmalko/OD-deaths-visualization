@@ -25,7 +25,7 @@ Our goal will be to estimate the number of drug users in each state. Since this 
 -   By looking at the proprtion of drug-related deaths to overall deaths, we are assuming that the number of overall deaths is a good proxy for the population density in a given state. This may not be a safe assumption, and a better strategy would be to just look up population statistics directly.
 -   We are also assuming that the number of deaths is a good proxy for the number of drug users. This is likely not a valid assumption: e.g. one could imagine that a good health system in a given state would reduce number of deaths among drug addicts. Mortality rates can differ depending on the age group, type of the drug used, frequency of use and other factors. Ideally one would use multiple predictors to estimate the number of drug addicts in a given state. Furthemore, the dataset itself comes with several limitations:
 
--   The death causes in the `Indicator` column are not exclusive, as outlined in *Techincal details* [here](). There is no way of knowing how many deaths were counted multiple times from this dataset alone, so the results we get will necessarily be approximate.
+-   The death causes in the `Indicator` column are not exclusive, as outlined in *Technical details* [here](https://www.cdc.gov/nchs/nvss/vsrr/drug-overdose-data.htm). There is no way of knowing how many deaths were counted multiple times from this dataset alone, so the results we get will necessarily be approximate.
 -   The number of deaths (overall and drug-related ones) may be underreported for certain states and time periods, as indicated by the notes in the dataset.
 
 Finally, let us note a couple of details about interpreting the deaths counts in this dataset:
