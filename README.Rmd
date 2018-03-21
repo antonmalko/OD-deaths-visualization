@@ -400,7 +400,7 @@ dplyr::inner_join(states, deaths_props$split, by = c("region" = "State.Name_lowe
 
 Our short analysis appears to suggest two things. 
 
-First, the states with high proportions of drug related deaths are mostly concentrated on the East and West of the country. Of course, is this were the population is concentrated, but since we are looking at proportions, the differences in the baseline for the population size would have been already accounted for to some degree. If we take the death data to be a valid proxy for prevalence of drug users, the above would suggest that eastern and western state are in the worse shape realtive to the rest of the country. However, with the caveats discussed in the beginning of the report, this remains purely speculative.
+First, the states with high proportions of drug related deaths are mostly concentrated on the East and West of the country. Of course, this is were the population is concentrated, but since we are looking at proportions, the differences in the baseline for the population size would have been already accounted for to some degree. If we take the death data to be a valid proxy for prevalence of drug users, the above would suggest that eastern and western state are in the worse shape realtive to the rest of the country. However, with the caveats discussed in the beginning of the report, this remains purely speculative.
 
 Second, the states on the East Coast, especially Maryland and West Virginia (as well as DC), seem to have the increase in the proportion of drug related deaths for the last couple of years (in particular, due to synthetic opioid drugs other than methadone). 
 
