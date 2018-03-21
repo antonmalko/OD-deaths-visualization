@@ -380,7 +380,7 @@ plot_2016 <- plot_data %>%
             size = 3) +
   theme_map +
   theme_legend + 
-  ggtitle("Sep 2015- Aug 2016")
+  ggtitle("Sep 2015 - Aug 2016")
 
 plot_2017 <- plot_data %>%
   dplyr::filter(Year == 2017) %>%
