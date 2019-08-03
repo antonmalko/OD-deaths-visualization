@@ -45,7 +45,10 @@ The code block below deals with a few data enhancements:
 -   Putting ICD indicators of deaths cause for specific drugs into a separate column
 -   Adding short convenient names for death causes
 
-<details><summary>**Show code**</summary>
+<details>
+    <summary>
+        <b>Show code</b>
+    </summary>
 
 ``` r
 library(dplyr)
@@ -159,7 +162,7 @@ Then for each state reporting specific causes of death we count the number of "s
 
 It doesn't seem to be the case though: the first output below is the first few counts of OD deaths, and the second output is the first few counts of specific deaths. In fact, there are more deaths which are listed with specific death causes. This makes me think that the OD deaths is the "elsewhere" category.
 
-<details><summary>**Show code**</summary>
+<details><summary><b>Show code</b></summary>
 
 ``` r
 # count deaths
@@ -213,7 +216,7 @@ First, we calculate the proportion of drug deaths. We'll make it in two variants
 
 The first code block below deals with the transformations of the drug data; the second one - prepares the map data.
 
-<details><summary>**Show data transformation code**</summary>
+<details><summary><b>Show data transformation code</b></summary>
 
 ``` r
 # ---- Prepare drug deaths data ---- 
@@ -264,7 +267,7 @@ deaths_props$split <- dat  %>%
 
 </details>
 
-<details><summary>**Show map preparation code**</summary>
+<details><summary><b>Show map preparation code</b></summary>
 
 ``` r
 #  ---- Prepare map data ----
@@ -319,7 +322,7 @@ The maps suggest that there are a few regions in the US where (reported) drug de
 -   Washington
 -   A number of East Coast states, in particular West Virgina, New Hampshire and Maine
 
-<details><summary>**Show code**</summary>
+<details><summary><b>Show code</b></summary>
 
 ``` r
 # merge map data and drug data and feed this to ggplot2
@@ -335,8 +338,9 @@ plot_data %>%
   theme_legend +
   ggtitle("Proportion of drug related deaths")
 ```
+</details>
 
-![](README_files/figure-markdown_github/make-maps-1.png) </details> -----
+![](README_files/figure-markdown_github/make-maps-1.png)  
 
 Change in drug related deaths across the years
 ----------------------------------------------
@@ -353,7 +357,7 @@ The plots suggest that the proportions of drug related deaths mostly remain stab
 
 Interestingly, in the period of from Sep 2016 to Aug 2017 a few of the "hot" states see a decrease in the proportion of drug related deaths: these include Utah, Wyoming and Washington. However, these states experienced a slight increase in the previous yearly period, from Sep 2015 to Aug 2016, so it is an interesting question of whether the decrease in the most recent time period indicates just a return to the baseline.
 
-<details><summary>**Show code**</summary>
+<details><summary><b>Show code</b></summary>
 
 ``` r
 plot_2015 <- plot_data %>%
@@ -396,8 +400,9 @@ plot_2017 <- plot_data %>%
 
 grid.arrange(plot_2015, plot_2016, plot_2017, ncol = 2, nrow = 2)
 ```
+</details>
 
-![](README_files/figure-markdown_github/diff-maps-1.png) </details>
+![](README_files/figure-markdown_github/diff-maps-1.png) 
 
 Deaths by drug type
 -------------------
@@ -408,7 +413,7 @@ Keep in mind that "Non-specific opioids" likely include deaths caused by "natura
 
 The plots suggest that in most of the states, for which detailed information is available, the causes of death remain relatively stable through time. A few exceptions jump in the eye, however: DC, Maryland, West Virginia, where we observe increase in deaths caused by opioids (yellow line), in particular, synthetic ones (orange line). Deaths from other/non-specified drugs also increase (pink line). This observation is consistent with what we observed earlier in the maps.
 
-<details><summary>**Show code**</summary>
+<details><summary><b>Show code</b></summary>
 
 ``` r
 dplyr::inner_join(states, deaths_props$split, by = c("region" = "State.Name_lower")) %>%
@@ -429,8 +434,9 @@ dplyr::inner_join(states, deaths_props$split, by = c("region" = "State.Name_lowe
         plot.title = element_text(size=16)) +
   ggtitle("Change in proportion of drug related deaths by drug type")
 ```
+</details>
 
-![](README_files/figure-markdown_github/deaths-by-drug-type-1.png) </details>
+![](README_files/figure-markdown_github/deaths-by-drug-type-1.png) 
 
 Conclusions
 ===========
@@ -458,7 +464,7 @@ Overall, it appears that the states that our analysis identifed as problematic, 
 R session info
 ==============
 
-<details><summary>**Show**</summary>
+<details><summary><b>Show</b></summary>
 
 ``` r
 sessionInfo()
